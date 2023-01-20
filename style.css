@@ -17,7 +17,7 @@
   box-sizing: border-box;
   font-family: "open sans";
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .page {
@@ -145,14 +145,16 @@ a:hover {
   width: 0; 
   height: 0;
   transform: translateY(-100%);
-  border-bottom-width: 52px;
+  border-bottom-width: 50px;
   border-bottom-style: solid;
-  border-right: 52px solid transparent;
+  border-right: 50px solid transparent;
 }
 
 .content {
   padding: var(--padding);
   height: min-content;
+  /* border-top-width: 1px;
+  border-top-style: solid; */
 }
 
 .content p {
@@ -214,6 +216,7 @@ a:hover {
 
 #education-content {
   grid-area: education-content;
+  /* border-top-color: #036F8C; */
 }
 
 #projects-title {
@@ -227,6 +230,7 @@ a:hover {
 
 #projects-content {
   grid-area: projects-content;
+  /* border-top-color: #048C80; */
   position: relative;
   display: grid;
   gap: var(--padding) calc(var(--padding) * 2.5) ;
@@ -235,18 +239,6 @@ a:hover {
   "eloshapes fgg-jquery";
   grid-template-columns: 50% 1fr;
 }
-
-/* #projects-content::after {
- content: '';
- position: absolute;
- top: 50%;
- left: calc(52.5%);
- transform: translate(-50%, -50%);
- height: calc(100% - var(--padding) * 2);
- width: 1px;
- background-color: black;
- opacity: 0.1;
-} */
 
 #project-eloshapes {
   grid-area: eloshapes;
@@ -283,6 +275,7 @@ a:hover {
 
 #work-content {
   grid-area: work-content;
+  /* border-top-color: #07A77B; */
 }
 
 #skills-title {
@@ -296,4 +289,5 @@ a:hover {
 
 #skills-content {
   grid-area: skills-content;
+  /* border-top-color: #06BF7C; */
 }
