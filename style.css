@@ -17,7 +17,7 @@
   box-sizing: border-box;
   font-family: "open sans";
   font-weight: 300;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
 }
 
 .page {
@@ -98,9 +98,17 @@
 }
 
 #links ul li a {
-  font-size: 0.78rem;
-  text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
+}
+
+a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #main-content {
@@ -144,10 +152,11 @@
 
 .content {
   padding: var(--padding);
+  height: min-content;
 }
 
 .content p {
-  margin-top: 5px;
+  margin-top: 6px;
   opacity: 0.85;
   text-align: justify;
 }
@@ -157,14 +166,9 @@
 }
 
 .content a {
-  font-size: 0.72rem;
-  opacity: 0.8;
+  display: block;
+  padding-top: 6px;
   color: #0071b8;
-  text-decoration: none;
-}
-
-.content a:hover {
-  text-decoration: underline;
 }
 
 .content ul li {
@@ -192,7 +196,8 @@
 
 .sub-header-div span {
   margin-left: auto;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
   font-weight: 400;
   opacity: 0.5;
   font-family: "montserrat";
@@ -222,15 +227,41 @@
 
 #projects-content {
   grid-area: projects-content;
+  position: relative;
   display: grid;
-  gap: var(--padding) calc(var(--padding) * 2) ;
+  gap: var(--padding) calc(var(--padding) * 2.5) ;
   grid-template-areas: 
   "eloshapes fgg-react"
   "eloshapes fgg-jquery";
+  grid-template-columns: 50% 1fr;
 }
+
+/* #projects-content::after {
+ content: '';
+ position: absolute;
+ top: 50%;
+ left: calc(52.5%);
+ transform: translate(-50%, -50%);
+ height: calc(100% - var(--padding) * 2);
+ width: 1px;
+ background-color: black;
+ opacity: 0.1;
+} */
 
 #project-eloshapes {
   grid-area: eloshapes;
+  position: relative;
+}
+
+#project-eloshapes::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: calc(0px - var(--padding) * 1.25);
+  height: 100%;
+  width: 1px;
+  background-color: black;
+  opacity: 0.1;
 }
 
 #project-fgg-react {
