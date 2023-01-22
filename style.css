@@ -108,7 +108,8 @@
 }
 
 a {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -246,7 +247,7 @@ a:hover {
   "title title title"
   "gpa courses-4 courses-2"
   "gpa courses-3 courses-1";
-  gap: 10px;
+  gap: 10px 100px;
 }
 
 #education-content p {
@@ -296,11 +297,11 @@ a:hover {
 }
 
 #courses-3 {
-  grid-area: courses-3;
+  grid-area: courses-2;
 }
 
 #courses-2 {
-  grid-area: courses-2;
+  grid-area: courses-3;
 }
 
 #courses-1 {
