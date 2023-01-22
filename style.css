@@ -215,12 +215,14 @@ a:hover {
 }
 
 #projects-content,
-#work-content {
+#work-content,
+#skills-content {
   position: relative;
 }
 
 #projects-content::after,
-#work-content::after {
+#work-content::after,
+#skills-content::after {
   content: '';
   position: absolute;
   top: 0;
@@ -308,10 +310,6 @@ a:hover {
   grid-area: courses-1;
 }
 
-/* #gpa {
-  grid-area: gpa;
-} */
-
 #projects-title {
   grid-area: projects-title;
   background-color: var(--color4);
@@ -381,12 +379,28 @@ a:hover {
 
 #skills-content {
   grid-area: skills-content;
-  display: flex;
-  flex-direction: row;
-  gap: calc(var(--padding) * 3);
+  display: grid;
+  grid-template-areas: "text tools";
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--padding) * 2.5);
 }
 
-#skills-content > div {
+#skills-text {
+  grid-area: text;
+}
+
+#skills-text p:first-of-type {
+  margin: 0;
+}
+
+#skills-content #tools {
+  grid-area: tools;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#skills-content #tools > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
