@@ -387,10 +387,20 @@ a:hover {
 
 #skills-text {
   grid-area: text;
+  display: flex;
+  flex-direction: column;
 }
 
 #skills-text p:first-of-type {
   margin: 0;
+}
+
+#skills-text p:last-of-type {
+  margin-top: auto;
+}
+
+#skills-text .highlight-text {
+  font-weight: 500;
 }
 
 #skills-content #tools {
