@@ -189,7 +189,7 @@ a:hover {
 }
 
 .sub-header-div img {
-  height: 30px;
+  height: 28px;
   margin-right: 10px;
   border-radius: 3px;
 }
@@ -235,9 +235,9 @@ a:hover {
   border-bottom-color: #036F8C;
 }
 
-#education-content {
+/* #education-content {
   grid-area: education-content;
-  /* border-top-color: #036F8C; */
+  border-top-color: #036F8C;
   display: grid;
   grid-template-areas: 
   "title title"
@@ -245,6 +245,16 @@ a:hover {
   "courses-3 courses-1"
   "gpa gpa";
   gap: calc(var(--padding) / 1.5);
+} */
+
+#education-content {
+  grid-area: education-content;
+  display: grid;
+  grid-template-areas: 
+  "title title title"
+  "gpa courses-4 courses-2"
+  "gpa courses-3 courses-1";
+  gap: 10px;
 }
 
 #education-content p {
@@ -258,6 +268,35 @@ a:hover {
 
 #education-content ul {
   list-style: none;
+}
+
+#gpa {
+  grid-area: gpa;
+  display: flex;
+  flex-direction: column;
+}
+
+#gpa h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+#gpa div {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+#gpa .decimal-text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#gpa .small-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.5;
+  margin-top: auto;
 }
 
 #courses-4 {
@@ -276,9 +315,9 @@ a:hover {
   grid-area: courses-1;
 }
 
-#gpa {
+/* #gpa {
   grid-area: gpa;
-}
+} */
 
 #projects-title {
   grid-area: projects-title;
